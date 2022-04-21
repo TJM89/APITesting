@@ -23,7 +23,7 @@ public class BackendlessLoginTest {
 
 		RequestSpecification request = RestAssured.given();
 
-		String email = "Thomas450@gmail.com";
+		String email = "Thomas451@gmail.com";
 		String password = "Password123";
 
 		request.header("Content-Type", "application/json");
