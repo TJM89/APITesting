@@ -23,7 +23,7 @@ public class BackendlessLoginTest {
 
 		RequestSpecification request = RestAssured.given();
 
-		String email = "Thomas451@gmail.com";
+		String email = "Thomas8900@gmail.scom";
 		String password = "Password123";
 
 		request.header("Content-Type", "application/json");
@@ -53,13 +53,13 @@ public class BackendlessLoginTest {
 
 		Assert.assertEquals(200, response.statusCode());
 
-		System.out.println("User is logged in as " + response1);
+		System.out.println("User is logged in as " + response1.asPrettyString());
 		
 		Response response2 = request.put("/Thomas450@gmail.com");
 		Response response3 = request.put("/Password123");
 		
 		Assert.assertEquals(200, response.statusCode());
-		System.out.println("User has been updated to " + response2 + response3);
+		System.out.println("User has been updated to " + response2.asPrettyString() + response3.asPrettyString());
 
 	}
 
